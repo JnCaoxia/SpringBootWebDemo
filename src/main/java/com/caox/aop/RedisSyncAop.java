@@ -50,11 +50,12 @@ public class RedisSyncAop {
             Long tempSaveTime = iRedisService.get(key, Long.class);
             // 若锁被释放
             if (tempSaveTime == null) {
+                // 重新加锁
                 state = iRedisService.setNx(key, currTime);
                 continue;
             }
             // 锁被重新获取
-            if (!tempSaveTime.equals(saveTime)){
+            if (!tempSaveTime.equals(saveTime)) {
                 currTime = System.currentTimeMillis();
                 saveTime = tempSaveTime;
             }
@@ -66,7 +67,7 @@ public class RedisSyncAop {
                     state = iRedisService.setNx(key, currTime);
                     continue;
                 }
-                // 判断锁是否被释放 或 未被抢先获取
+                // 判断锁是否被释放 或 未被抢先获取  saveTime = tempSaveTime; tempTime(获取上一个锁时间value)
                 if (Objects.equals(saveTime, tempTime)) {
                     logger.warn("方法：{}，执行超时，已被强制解锁！", key);
                     break;
@@ -82,7 +83,7 @@ public class RedisSyncAop {
             }
             state = iRedisService.setNx(key, currTime);
         }
-        // 执行
+        // 执行方法
         result = pjp.proceed();
         Long currSaveTime = iRedisService.get(key, Long.class);
         // 判断锁未被判定为超时
