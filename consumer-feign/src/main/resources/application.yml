@@ -1,0 +1,9 @@
+app:
+  id: 113
+# set apollo meta server address, adjust to actual address if necessary
+apollo:
+  meta:
+  bootstrap:
+        enabled : true
+
+
