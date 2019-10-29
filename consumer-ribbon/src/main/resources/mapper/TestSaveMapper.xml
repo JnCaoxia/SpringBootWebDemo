@@ -1,0 +1,10 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.caox.dal.mapper.RibbonSaveMapper">
+
+    <insert id="save">
+      insert into test.test_msg
+      (result, msg)
+      values (#{result}, #{msg})
+    </insert>
+
+</mapper>

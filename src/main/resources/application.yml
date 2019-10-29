@@ -22,7 +22,7 @@ app:
   id: 110
 # set apollo meta server address, adjust to actual address if necessary
 apollo:
-  meta:
+  meta: http://10.6.55.86:8080
   bootstrap:
         enabled : true
 

@@ -4,7 +4,7 @@ import com.baofoo.ma.query.facade.model.Result;
 import com.baofoo.ma.query.facade.model.respone.MemberOpenResDTO;
 import com.caox.service.IRedisService;
 import com.caox.service.SyncService;
-import com.caox.service.impl.RemoteServiceImpl;
+//import com.caox.service.impl.RemoteServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
@@ -31,8 +31,8 @@ public class RedisController {
     @Resource
     private SyncService syncService;
 
-    @Resource
-    private RemoteServiceImpl remoteService;
+//    @Resource
+//    private RemoteServiceImpl remoteService;
 
     @Autowired
     LoadBalancerClient loadBalancerClient;
@@ -62,8 +62,9 @@ public class RedisController {
     @RequestMapping("/helloApollo")
     @ResponseBody
     public String sayApollo(){
-        Result<List<MemberOpenResDTO>> result =  remoteService.queryMerchantOpenInfoByAccountName("85187209@qq.com");
-        return "hello "+abc + result.getResult();
+//        Result<List<MemberOpenResDTO>> result =  remoteService.queryMerchantOpenInfoByAccountName("85187209@qq.com");
+//        return "hello "+abc + result.getResult();
+        return null;
     }
 
     @GetMapping("/get")

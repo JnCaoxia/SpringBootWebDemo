@@ -13,4 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public interface ConsumerService {
     @RequestMapping(value = "/hi",method = RequestMethod.GET)
     String hiFromProvider();
+
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    int testFromProvider();
 }

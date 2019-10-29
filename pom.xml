@@ -52,6 +52,18 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+		</dependency>
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.boot</groupId>-->
 			<!--<artifactId>spring-boot-devtools</artifactId>-->
@@ -120,6 +132,25 @@
 			<groupId>com.baofoo.ma-query</groupId>
 			<artifactId>ma-query-service-facade</artifactId>
 			<version>4.1.32-SNAPSHOT</version>
+		</dependency>
+
+		<!--反洗钱信息变更-->
+		<dependency>
+			<groupId>com.baofu.rm</groupId>
+			<artifactId>oms-facade</artifactId>
+			<version>4.3.4-SNAPSHOT</version>
+		</dependency>
+		<!--敏感信息加密解密-->
+		<dependency>
+			<groupId>com.baofoo.cryption</groupId>
+			<artifactId>cryption</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.mandao.share</groupId>
+			<artifactId>share-facade</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 
 		<!--使用   LoadBalancerClient-->

@@ -1,9 +1,33 @@
-app:
-  id: 112
-# set apollo meta server address, adjust to actual address if necessary
-apollo:
-  meta:
-  bootstrap:
-        enabled : true
+#app:
+#  id: 112
+## set apollo meta server address, adjust to actual address if necessary
+#apollo:
+#  meta: http://10.6.55.86:8080
+#  bootstrap:
+#        enabled : true
+server:
+   port: 8765
+
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8761/eureka/
+      registerWithEureka: true
+
+spring:
+    application:
+       name: consumer-ribbon
+    datasource:
+       url: jdbc:mysql://localhost:3306/test?characterEncoding=utf-8
+       username: root
+       password: 123456
+       driver-class-name: com.mysql.jdbc.Driver
+
+tx-lcn:
+   client:
+        manager-address: localhost:8070
+
+mybatis:
+    mapper-locations: classpath:mapper/*Mapper.xml
 
 

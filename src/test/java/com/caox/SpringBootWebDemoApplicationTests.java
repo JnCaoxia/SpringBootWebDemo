@@ -2,7 +2,8 @@ package com.caox;
 
 import com.baofoo.ma.query.facade.model.Result;
 import com.baofoo.ma.query.facade.model.respone.MemberOpenResDTO;
-import com.caox.service.impl.RemoteServiceImpl;
+//import com.baofu.rm.oms.facade.aml.customer.dto.request.NotificationGradDto;
+//import com.caox.service.impl.RemoteServiceImpl;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,8 +19,8 @@ import java.util.List;
 @Slf4j
 public class SpringBootWebDemoApplicationTests {
 
-	@Resource
-	RemoteServiceImpl remoteService;
+//	@Resource
+//	RemoteServiceImpl remoteService;
 
 	@Value("${spring.dubbo.registry.address}")
 	private String registerAddress;
@@ -30,12 +31,14 @@ public class SpringBootWebDemoApplicationTests {
 		log.info("abc:"+registerAddress);
 	}
 
-	@Test
-	public void testQueryInfoByAccountName(){
-		String accountName = "85187209@qq.com";
-		Result<List<MemberOpenResDTO>> result = remoteService.queryMerchantOpenInfoByAccountName(accountName);
-		log.info("call testQueryInfoByAccountName | RESULT : {}", result);
-	}
+//	@Test
+//	public void testQueryInfoByAccountName(){
+//		String accountName = "85187209@qq.com";
+//		Result<List<MemberOpenResDTO>> result = remoteService.queryMerchantOpenInfoByAccountName(accountName);
+//		log.info("call testQueryInfoByAccountName | RESULT : {}", result);
+//		NotificationGradDto notificationGradDto = new NotificationGradDto();
+//		remoteService.notice(notificationGradDto);
+//	}
 
 }
 
