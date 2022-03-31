@@ -23,7 +23,7 @@
 		<zookeeper.version>3.4.8</zookeeper.version>
 		<dubbo.boot.version>0.1.0</dubbo.boot.version>
 		<dubbo.config.version>2.6.1</dubbo.config.version>
-		<spring.framework.version>5.0.5.RELEASE</spring.framework.version>
+		<spring.framework.version>5.3.18</spring.framework.version>
 		<spring-cloud.version>Greenwich.SR1</spring-cloud.version>
 	</properties>
 
